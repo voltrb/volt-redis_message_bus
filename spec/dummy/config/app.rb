@@ -108,15 +108,15 @@ Volt.configure do |config|
   #
   # The default message bus (called "peer_to_peer") uses the database to sync
   # socket ip's/ports.
-  # config.message_bus.bus_name = 'peer_to_peer'
+  config.message_bus.bus_name = 'redis'
   #
   # Encrypt message bus - messages on the message bus are encrypted by default
   # using rbnacl.
-  
+
   #
   # For dummy apps, we disable_encryption, to simplify the gem requirements.
   config.message_bus.disable_encryption = true
-  
+
   #
   # ## MessageBus Server -- the message bus binds to a port and ip which the
   # other volt instances need to be able to connect to.  You can customize

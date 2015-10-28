@@ -11,6 +11,8 @@
 # If you need to configure volt in some way, you can add a Volt.configure block
 # in this file.
 
+require 'volt/message_bus/redis_message_bus'
+
 module Volt
   module RedisMessageBus
     # Your code goes here...
