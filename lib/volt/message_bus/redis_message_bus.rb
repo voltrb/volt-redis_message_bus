@@ -46,6 +46,8 @@ module Volt
         msg_bus = Volt.config.message_bus
         if msg_bus && (opts = msg_bus.connect_options)
           ::Redis.new(opts)
+        elsif ENV['REDIS_URL']
+          ::Redis.new(url: ENV["REDIS_URL"])
         else
           ::Redis.new
         end
